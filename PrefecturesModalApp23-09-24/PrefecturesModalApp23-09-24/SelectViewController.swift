@@ -9,21 +9,25 @@ import UIKit
 
 class SelectViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var tokyoButton: UIButton!
+    @IBOutlet weak var kanagawaButton: UIButton!
+    @IBOutlet weak var saitamaButton: UIButton!
+    @IBOutlet weak var chibaButton: UIButton!
 
-        // Do any additional setup after loading the view.
+    @IBAction func didTapTokyoButton(_ sender: Any) {
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func didTapKanagawaButton(_ sender: Any) {
     }
-    */
+    
+    @IBAction func didTapSaitamaButton(_ sender: Any) {
+    }
+    
+    @IBAction func didTapChibaButton(_ sender: Any) {
+    }
 
+    @IBAction func didTapCancelButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }

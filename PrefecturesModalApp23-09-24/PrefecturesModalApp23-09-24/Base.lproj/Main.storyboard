@@ -55,7 +55,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="selectButton" destination="lbJ-kD-Sne" id="MgW-bf-8XS"/>
                         <outlet property="selectedPrefectureLabel" destination="8Rd-vi-S0A" id="YhC-SK-Cf0"/>
                     </connections>
                 </viewController>
@@ -127,12 +126,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ohD-8V-qKM"/>
-                    <connections>
-                        <outlet property="chibaButton" destination="xwD-L4-Z7C" id="z17-iL-uug"/>
-                        <outlet property="kanagawaButton" destination="c2P-xG-abN" id="QgS-ps-NNr"/>
-                        <outlet property="saitamaButton" destination="eM9-jB-Eyr" id="rPY-DW-Al8"/>
-                        <outlet property="tokyoButton" destination="zLB-Ai-RMb" id="33R-jb-lL7"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pbn-Ii-Ufi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

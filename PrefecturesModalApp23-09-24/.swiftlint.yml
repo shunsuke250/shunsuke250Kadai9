@@ -5,3 +5,6 @@ opt_in_rules:
   - unneeded_parentheses_in_closure_argument
   - vertical_whitespace_closing_braces
   - vertical_whitespace_opening_braces
+excluded:
+  - ./PrefecturesModalApp23-09-24/AppDelegate.swift
+  - ./PrefecturesModalApp23-09-24/SceneDelegate.swift

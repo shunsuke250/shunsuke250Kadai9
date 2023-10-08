@@ -12,39 +12,29 @@ protocol SelectViewControllerDelegate: AnyObject {
 }
 
 class SelectViewController: UIViewController {
-    @IBOutlet private weak var tokyoButton: UIButton!
-    @IBOutlet private weak var kanagawaButton: UIButton!
-    @IBOutlet private weak var saitamaButton: UIButton!
-    @IBOutlet private weak var chibaButton: UIButton!
-
-    var selectedPrefecture = ""
     weak var delegate: SelectViewControllerDelegate?
 
-    @IBAction private func didTapTokyoButton(_ sender: Any) {
-        selectedPrefecture = "東京都"
-        delegate?.didSelectPrefecture(selectedPrefecture)
-        self.dismiss(animated: true, completion: nil)
+    @IBAction func didTapTokyoButton(_ sender: Any) {
+        delegate?.didSelectPrefecture("東京都")
+        dismiss(animated: true, completion: nil)
     }
 
-    @IBAction private func didTapKanagawaButton(_ sender: Any) {
-        selectedPrefecture = "神奈川県"
-        delegate?.didSelectPrefecture(selectedPrefecture)
-        self.dismiss(animated: true, completion: nil)
+    @IBAction func didTapKanagawaButton(_ sender: Any) {
+        delegate?.didSelectPrefecture("神奈川県")
+        dismiss(animated: true, completion: nil)
     }
 
-    @IBAction private func didTapSaitamaButton(_ sender: Any) {
-        selectedPrefecture = "埼玉県"
-        delegate?.didSelectPrefecture(selectedPrefecture)
-        self.dismiss(animated: true, completion: nil)
+    @IBAction func didTapSaitamaButton(_ sender: Any) {
+        delegate?.didSelectPrefecture("埼玉県")
+        dismiss(animated: true, completion: nil)
     }
 
-    @IBAction private func didTapChibaButton(_ sender: Any) {
-        selectedPrefecture = "千葉県"
-        delegate?.didSelectPrefecture(selectedPrefecture)
-        self.dismiss(animated: true, completion: nil)
+    @IBAction func didTapChibaButton(_ sender: Any) {
+        delegate?.didSelectPrefecture("千葉県")
+        dismiss(animated: true, completion: nil)
     }
 
-    @IBAction private func didTapCancelButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+    @IBAction func didTapCancelButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
 }

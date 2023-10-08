@@ -12,7 +12,6 @@ protocol SelectViewControllerDelegate: AnyObject {
 }
 
 class SelectViewController: UIViewController {
-
     weak var delegate: SelectViewControllerDelegate?
 
     @IBAction func didTapTokyoButton(_ sender: Any) {

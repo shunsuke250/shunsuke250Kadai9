@@ -8,12 +8,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     @IBOutlet private weak var selectedPrefectureLabel: UILabel!
 
-    @IBAction func didTapSelectButton(_ sender: Any) {
+    @IBAction private func didTapSelectButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let selectViewController = storyboard.instantiateViewController(withIdentifier: "SelectViewController") as? SelectViewController {
+        if let selectViewController = storyboard.instantiateViewController(
+            withIdentifier: "SelectViewController") as? SelectViewController {
             selectViewController.delegate = self
             selectViewController.modalPresentationStyle = .fullScreen
             present(selectViewController, animated: true, completion: nil)

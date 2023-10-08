@@ -8,16 +8,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     @IBOutlet private weak var selectedPrefectureLabel: UILabel!
     @IBOutlet private weak var selectButton: UIButton!
-    
+
     // ViewController内で選択された都道府県を保持するプロパティ
     var selectedPrefecture = ""
 
-    @IBAction func didTapSelectButton(_ sender: Any) {
+    @IBAction private func didTapSelectButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let selectViewController = storyboard.instantiateViewController(withIdentifier: "SelectViewController") as? SelectViewController {
+        if let selectViewController = storyboard.instantiateViewController(
+            withIdentifier: "SelectViewController") as? SelectViewController {
             selectViewController.delegate = self
             selectViewController.modalPresentationStyle = .fullScreen
             self.present(selectViewController, animated: true, completion: nil)
